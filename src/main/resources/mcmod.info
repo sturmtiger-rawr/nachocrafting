@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nachos",
+  "name": "NachoCrafting",
+  "description": "Drugz and Weaponry.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "github.com/sturmtiger-rawr/nachocrafting",
+  "updateUrl": "",
+  "authorList": ["nacho, deepseek"],
+  "credits": "nacho... and the People's Republic of China for making deepseek",
+  "logoFile": "assets/nachos/textures/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
