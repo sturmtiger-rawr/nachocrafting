@@ -10,4 +10,4 @@
 # version: 1.12.2 forge
 # THIS MOD IS ON ALPHA, EXPECT BUGS AND VERY FAST UPDATES
 
-nachogameplays/sturmtiger-rawr made a 75% of code, chatgpt made a 25% of code
+nachogameplays/sturmtiger-rawr made a 75% of code
