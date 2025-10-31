@@ -4,8 +4,12 @@ import com.google.common.util.concurrent.ListenableFuture;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.FMLLog;
+import org.apache.logging.log4j.Logger;
 
 public class CommonProxy {
+    protected static final Logger LOGGER = FMLLog.log;
+
 
     public void registerItemRenderer(Item item, int meta, String id) {
 
@@ -15,13 +19,16 @@ public class CommonProxy {
 
     }
 
-    public ListenableFuture<Object> addScheduledTaskClient(Runnable runnableToSchedule)
-    {
-        throw new IllegalStateException("This should only be called from client side");
+    public ListenableFuture<Object> addScheduledTaskClient(Runnable runnableToSchedule) {
+        return null;
     }
 
-    public EntityPlayer getClientPlayer()
-    {
-        throw new IllegalStateException("This should only be called from client side");
+    public EntityPlayer getClientPlayer() {
+        return null;
     }
+
+    public void preInit() {}
+    public void init() {}
+    public void postInit() {}
+
 }
