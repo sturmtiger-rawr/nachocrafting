@@ -3,6 +3,7 @@ package com.nacho.nachos.common.objects.items;
 
 import com.nacho.nachos.Main;
 import com.nacho.nachos.common.init.ItemInit;
+import com.nacho.nachos.common.util.Reference;
 import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
@@ -11,8 +12,9 @@ public class ItemBase extends Item {
 
     public ItemBase(String name, ItemType type) {
         this.type = type;
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        // usar namespace explícito para registryName y prefijo para unlocalizedName
+        setUnlocalizedName(Reference.MODID + "." + name);
+        setRegistryName(Reference.MODID, name);
         setCreativeTab(Main.NACHOSTAB);
 
         // configuración por defecto

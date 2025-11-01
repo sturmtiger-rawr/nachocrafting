@@ -1,11 +1,11 @@
 package com.nacho.nachos;
 
-import com.nacho.nachos.common.init.ItemInit;
 import com.nacho.nachos.common.proxy.CommonProxy;
 import com.nacho.nachos.common.util.Reference;
 import com.nacho.nachos.common.util.handlers.RegistryHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -22,10 +22,18 @@ public class Main
     @Instance
     public static Main instance;
 
-    public static final CreativeTabs NACHOSTAB = new CreativeTabs("nachos_tab") {
+    // clave en minúsculas; la traducción se proporciona en assets/<modid>/lang/<locale>.lang
+    public static final String TAB_KEY = "nachos_tab";
+
+    public static final CreativeTabs NACHOSTAB = new CreativeTabs(TAB_KEY) {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ItemInit.MARIAJUANA); // Icono de la pestaña
+            // buscar por nombre para evitar dependencia de orden de inicialización
+            Item icon = Item.getByNameOrId(Reference.MODID + ":mariajuana");
+            if (icon != null) {
+                return new ItemStack(icon);
+            }
+            return new ItemStack(Item.getByNameOrId("minecraft:apple")); // fallback seguro
         }
     };
 

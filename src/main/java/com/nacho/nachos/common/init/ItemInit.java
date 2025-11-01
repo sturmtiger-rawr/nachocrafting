@@ -14,7 +14,9 @@ public class ItemInit {
     public static final List<Item> ITEMS = new ArrayList<>();
 
     // COMESTIBLES
-    public static final Item BAGUETTE = new ItemFoodBase("baguette", 2, 0.142F, false);
+    // Baguette: llena la barra a la mitad -> 10 puntos de hambre
+    public static final Item BAGUETTE = new ItemFoodBase("baguette", 10, 0.142F, false, false);
 
-    public static final Item MARIAJUANA = new ItemFoodBase("mariajuana", 2, 0.178F, false);
+    // Mariajuana: llena la barra completa -> 20 puntos de hambre; isDrug = true
+    public static final Item MARIAJUANA = new ItemFoodBase("mariajuana", 20, 0.178F, true, false);
 }
