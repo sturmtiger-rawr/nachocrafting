@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "nachos:mariajuana"
+    },
+    "title": {
+      "translate": "advancement.nachos.nachocrafting.title"
+    },
+    "description": {
+      "translate": "advancement.nachos.nachocrafting.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "starting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:crafting_table"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50
+  }
+}
