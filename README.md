@@ -1,4 +1,4 @@
-# nachocrafting V0.5
+# nachocrafting V0.8
 ## drugz and weaponry
 *English* this mod adds drugz and more villager trades, u can sell drugz to a villager and u get weaponry (from hbm nucleartech mod) very simple
 
