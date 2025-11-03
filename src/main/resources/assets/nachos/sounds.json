@@ -1,7 +1,8 @@
 {
   "drugz": {
+    "category": "player",
     "sounds": [
-      "drugz"
+      { "name": "nachos:drugz", "stream": false }
     ]
   }
 }

@@ -1,0 +1,12 @@
+# src/main/resources/assets/nachos/lang/en_us.lang
+# NachosTab
+itemGroup.nachos_tab=Nachocrafting
+# Items
+item.nachos.baguette.name=Baguette
+item.nachos.mariajuana.name=Mariajuana
+item.nachos.drugzlabz.name=Drugz Labz
+# advancements
+advancement.nachos.mariajuana.title=Uh? What is this?
+advancement.nachos.mariajuana.description=yummy, this weed is very good!
+advancement.nachos.nachocrafting.title=Drugz And Weaponry
+advancement.nachos.nachocrafting.description=¡good luck with ur narco empire!

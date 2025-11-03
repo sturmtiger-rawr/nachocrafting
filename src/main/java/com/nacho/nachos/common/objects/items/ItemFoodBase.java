@@ -3,6 +3,7 @@ package com.nacho.nachos.common.objects.items;
 
 import com.nacho.nachos.Main;
 import com.nacho.nachos.common.init.ItemInit;
+import com.nacho.nachos.common.init.ModSounds;
 import com.nacho.nachos.common.util.Reference;
 
 import net.minecraft.entity.EntityLivingBase;
@@ -62,10 +63,9 @@ public class ItemFoodBase extends ItemFood {
             }
             data.setInteger("nachos_maria_count", count);
 
-            // Buscar el SoundEvent por ResourceLocation y reproducirlo
-            SoundEvent sound = SoundEvent.REGISTRY.getObject(new ResourceLocation(Reference.MODID, "drugz"));
-            if (sound != null) {
-                worldIn.playSound(null, player.posX, player.posY, player.posZ, sound, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            if (isDrug && !worldIn.isRemote) {
+                worldIn.playSound(null, player.posX, player.posY, player.posZ,
+                        ModSounds.DRUGZ, SoundCategory.PLAYERS, 1.0F, 1.0F);
             }
         }
 

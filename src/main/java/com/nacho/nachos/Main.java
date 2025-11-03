@@ -50,7 +50,6 @@ public class Main
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-
     }
 
     @EventHandler
